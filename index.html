@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Import Vue.js -->
+     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Vue Mastery</title>
+</head>
+<body>
+
+    
+    <div id="app">
+        <div class="nav-bar"></div>
+        <div class="cart">cart({{cart}}</div>
+    
+        <product-display :premium="premium" @add-to-cart='updateCart'   @remove='reduceC'></product-display>
+        <product-display :premium="premium"> </product-display>
+        <product-display></product-display>
+       
+    </div>
+
+    <!-- Import Js -->
+    <script src="main.js"></script>
+
+    <!-- Import Component -->
+    <script src="./components/productDisplay.js"></script>
+
+    <!-- import review form -->
+    <script src="./components/ReviewForm.js"></script>
+
+    <!-- import review list -->
+    <script src="./components/reviewList.js"></script>
+
+ <!--Import product details-->
+   <script src="./components/productDetails.js"></script>
+  <!-- Import App -->
+    <script>
+        const mountedApp = app.mount("#app");
+    </script>
+  
+</body>
+</html>
